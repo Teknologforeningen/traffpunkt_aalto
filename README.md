@@ -26,7 +26,19 @@ To activate virtualenv:
 source venv/bin/activate
 '''
 
+PIL requirements:
+https://github.com/python-imaging/Pillow
+'''bash
+# Ubuntu 12.04
+$ sudo apt-get install python-dev python-setuptools
+$ sudo apt-get install libtiff4-dev libjpeg8-dev zlib1g-dev libfreetype6-dev liblcms1-dev libwebp-dev
+'''
+
 Install requirements:
 '''bash
 pip install -r requirements.txt
 '''
+
+Libraries
+==========
+- http://bootswatch.com/cosmo/
