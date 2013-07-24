@@ -13,7 +13,7 @@ sudo easy_install virtualenv
 
 Clone the repository.
 '''bash
-git clone git@github.com:Teknologforeningen/traffpunk_aalto.git
+git clone git@github.com:Teknologforeningen/traffpunk_aalto.git && cd traffpunk_aalto/
 '''
 
 Install virtualenv to the project.
