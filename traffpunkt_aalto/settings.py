@@ -155,6 +155,7 @@ INSTALLED_APPS = (
     'mptt',
     'menus',
     'sekizai',
+    'easy_thumbnails',
     'filer',
     'cmsplugin_filer_file',
     'cmsplugin_filer_folder',
