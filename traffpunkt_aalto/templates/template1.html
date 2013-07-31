@@ -1,6 +1,45 @@
 {% extends "base.html" %}
 {% load cms_tags %}
+{% load menu_tags %}
 
 {% block base_content %}
-  {% placeholder template_1_content %}
+<div class="container"> 
+	<div class="masthead">
+		<h3 class="text-muted">Tr&auml;ffpunk Aalto</h3>
+		
+		<div class="navbar">
+			<a class="navbar-brand" href="#">Home</a>
+			<ul class="nav navbar-nav">
+				{% show_menu 0 100 0 1 %}
+			</ul>
+		</div>
+	</div>
+	
+	{% block jumbotron %}
+	<div class="jumbotron">
+		{% placeholder jumbotron %}
+	</div>
+	{% endblock %}
+
+	{% block body-content %}
+	<div class="body-content">
+		<div class="row">
+			<div class="col-lg-4">{% placeholder row1col1 %}</div>
+			<div class="col-lg-4">{% placeholder row1col2 %}</div>
+			<div class="col-lg-4">{% placeholder row1col3 %}</div>
+		</div>
+
+		<div class="row">
+			<div class="col-lg-4">{% placeholder row2col1 %}</div>
+			<div class="col-lg-4">{% placeholder row2col2 %}</div>
+			<div class="col-lg-4">{% placeholder row2col3 %}</div>
+		</div>
+	</div>
+	{% endblock %}
+
+	<div class="footer">
+        <p>© Teknologf&ouml;reningen 2013</p>
+    </div>
+</div>
+
 {% endblock %}

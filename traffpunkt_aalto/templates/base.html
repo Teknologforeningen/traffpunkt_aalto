@@ -1,12 +1,23 @@
 {% load cms_tags sekizai_tags %}
 <html>
   <head>
-      {% render_block "css" %}
+  	<title>{% block title %}Tr&auml;ffpunk Aalto{% endblock %}</title>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	{% render_block "css" %}
+	{% addtoblock "css" %}
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/css/bootstrap.min.css">
+	{% endaddtoblock %}
   </head>
   <body>
-      {% cms_toolbar %}
-      {% placeholder base_content %}
-      {% block base_content %}{% endblock %}
-      {% render_block "js" %}
+		{% cms_toolbar %}
+		{% placeholder base_content %}
+		{% block base_content %}
+		{% endblock %}
+
+		{% render_block "js" %}
+		{% addtoblock "js" %}
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0-rc1/js/bootstrap.min.js"></script>
+		{% endaddtoblock %}
   </body>
 </html>
