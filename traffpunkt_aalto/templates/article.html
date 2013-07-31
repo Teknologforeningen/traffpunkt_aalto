@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load cms_tags %}
+
+
+{% block base_content %}
+
+<article>
+	<div class="container">
+		{% block article %}
+			{% placeholder article %}
+		{% endblock %}
+	</div>
+</article>
+
+
+{% endblock %}

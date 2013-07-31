@@ -131,8 +131,12 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, 'templates'),
 )
 
-CMS_TEMPLATES = (
-    ('template1.html', 'Template One'),
+THUMBNAIL_PROCESSORS = (
+    'easy_thumbnails.processors.colorspace',
+    'easy_thumbnails.processors.autocrop',
+    #'easy_thumbnails.processors.scale_and_crop',
+    'filer.thumbnail_processors.scale_and_crop_with_subject_location',
+    'easy_thumbnails.processors.filters',
 )
 
 LANGUAGES = [
@@ -197,6 +201,11 @@ LOGGING = {
         },
     }
 }
+
+CMS_TEMPLATES = (
+    ('front.html', 'Front Page'),
+    ('article.html', 'Article'),
+)
 
 # Import local settings.
 try:
