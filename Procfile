@@ -1,0 +1,1 @@
+web: gunicorn traffpunkt_aalto.wsgi
