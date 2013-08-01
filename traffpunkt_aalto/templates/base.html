@@ -15,9 +15,7 @@
 	{% cms_toolbar %}
 		<div class="navi"> 
 			<div class="container">
-				<h3 class="text-muted">Tr&auml;ffpunk Aalto</h3>
-				<div class="navbar">
-					<a class="navbar-brand" href="#">Home</a>
+				<div class="">
 					<ul class="nav navbar-nav">
 						{% show_menu 0 100 0 1 %}
 					</ul>
@@ -28,9 +26,28 @@
 		{% block base_content %}
 		{% endblock %}
 
-		<footer class="footer">
+		<footer>
 			<div class="container">
-		    	<p>© Teknologf&ouml;reningen 2013</p>
+				<div class="row">
+					<div class="col-lg-6">
+						<address>
+							<strong>Teknologf&ouml;reningen</strong><br>
+							Otsvängen 22<br>
+							02150 Esbo<br>
+							Finland<br>
+						</address>
+					</div>
+					<div class="col-lg-6">
+						<address>
+							<strong></strong>
+						</address>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+				    	<p>© Teknologf&ouml;reningen 2013</p>
+					</div>
+				</div>
 		    </div>
 		</footer>
 
