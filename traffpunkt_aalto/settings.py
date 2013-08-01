@@ -1,5 +1,7 @@
 # -- coding: UTF-8 --
 import os, sys
+import dj_database_url
+
 gettext = lambda s: s
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
 
@@ -15,14 +17,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': os.path.join(PROJECT_PATH, 'sqlite.db'), # Or path to database file if using sqlite3.
-        'USER': '',
-        'PASSWORD': '',
-        'HOST': '',                      # Empty for localhost through domain sockets or '127.0.0.1' for localhost through TCP.
-        'PORT': '',                      # Set to empty string for default.
-    }
+    'default': dj_database_url.config()
 }
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
@@ -208,9 +203,20 @@ CMS_TEMPLATES = (
 )
 
 
-# Parse database configuration from $DATABASE_URL
-import dj_database_url
-DATABASES['default'] =  dj_database_url.config()
+# Import local settings.
+try:
+    from local_settings import *
+    print "Using local settings"
+except ImportError:
+    pass
+
+# Import production settings.
+try:
+    from production_settings import *
+except ImportError:
+    print "No production settings found"
+    pass
+
 
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
