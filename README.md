@@ -21,7 +21,7 @@ Install virtualenv to the project.
 virtualenv --no-site-packages venv
 ```
 
-To activate virtualenv:
+Activate virtualenv:
 ```bash
 source venv/bin/activate
 ```
@@ -39,12 +39,55 @@ Install requirements:
 pip install -r requirements.txt
 ```
 
+Virtualenv
+==========
+
+To activate:
+```bash
+$ source venv/bin/activate
+```
+
+Now you can use pip without sudo, and run django with pip's isolated packages just like you would normally.
+
+Database
+=========
+
+After fresh install:
+```bash
+python manage.py syncdb --all
+python manage.py migrate --fake
+```
+
+
 Heroku
 ======
 
-Pushing heroku-branch to heroku:
+Guide: https://devcenter.heroku.com/articles/django
+
+Add heroku remote to git:
 ```bash
-$ git push -f heroku heroku:master
+$ heroku git:remote -a <heroku-app-id>
+```
+
+Deploy branch named "heroku" to heroku:
+```bash
+$ git push -f heroku heroku:refs/heads/master
+```
+
+Running commands:
+```bash
+# e.g
+$ heroku run python manage.py syncdb
+```
+
+Start/scale the instance:
+```bash
+$ heroku ps:scale web=1
+```
+
+Check the status:
+```bash
+$ heroku ps
 ```
 
 Check if database is configured and ready:
@@ -70,8 +113,10 @@ $ heroku config | grep HEROKU_POSTGRESQL
 $ heroku pg:promote <output of previous command>
 ```
 
-More information here: https://devcenter.heroku.com/articles/heroku-postgresql#provisioning-the-add-on
+Reset the database
+```bash
+$ heroku pg:reset DATABASE
+```
 
-Libraries
-==========
-- http://bootswatch.com/cosmo/
+More db information here: https://devcenter.heroku.com/articles/heroku-postgresql#provisioning-the-add-on
+
