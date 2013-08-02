@@ -2,7 +2,7 @@
 import os, sys
 gettext = lambda s: s
 PROJECT_PATH = os.path.abspath(os.path.dirname(__file__))
-
+sys.path.insert(1, os.path.dirname(os.path.realpath(__file__)))
 # Django settings for traffpunkt_aalto project.
 
 DEBUG = True
@@ -207,3 +207,13 @@ CMS_TEMPLATES = (
     ('article.html', 'Article'),
 )
 
+try:
+    ENVIRONMENT = os.environ["DJANGO_ENVIRONMENT"]
+    if ENVIRONMENT == "heroku":
+        try:
+            from heroku.settings import *
+        except ImportError as e:
+            print "Heroku settings not found."
+
+except KeyError:
+    print "No env variable found."

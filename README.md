@@ -69,6 +69,11 @@ Add heroku remote to git:
 $ heroku git:remote -a <heroku-app-id>
 ```
 
+Set the environment variable so the settings use heroku-settings:
+```bash
+$ heroku config:set DJANGO_ENVIRONMENT=heroku
+```
+
 Deploy branch named "heroku" to heroku:
 ```bash
 $ git push -f heroku heroku:refs/heads/master
