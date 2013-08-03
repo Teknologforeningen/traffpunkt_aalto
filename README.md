@@ -133,5 +133,14 @@ Credits
 Twitter Bootstrap
 http://getbootstrap.com/
 
+less
+http://lesscss.org/
+
+Django
+https://www.djangoproject.com/
+
+Django CMS
+https://www.django-cms.org/en/
+
 Cover by Flickr user pigliapost
 https://secure.flickr.com/photos/69621323@N00/238737785/in/photolist-n6AqH-npMCE-sgPpb-sM9r5-tTTNW-xagrN-xSdor-C4Qjf-C5DcP-DtQSs-E7Bwm-JMxaf-KuCys-LyBAr-MsHbZ-NoYBr-Pxc2R-2dQM4b-2B59fq-2NFggq-34BNPm-38n1EA-3995Te-3agcN1-3BmA3R-3HtqMh-47DPma-4b39Ci-4it75W-4jS9jx-4qB8Ee-4wJnUd-4yQtW6-4BMG8r-4CkQke-4H8JKp-4J1wkM-4KhjqG-4NrQSz-4Nw3YU-4U48mS-4U7Ts3-4XJ315-51jmeh-54kbk6-56egm5-594B8n-5au2ka-5buUFz-5gMjXh-5hzMhr
