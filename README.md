@@ -1,6 +1,8 @@
 Install
 =======
 
+Installation instructions for Ubuntu. Tested on 12.04.
+
 Install setuptools.
 ```bash
 sudo apt-get install python-setuptools
@@ -13,7 +15,7 @@ sudo easy_install virtualenv
 
 Clone the repository.
 ```bash
-git clone git@github.com:Teknologforeningen/traffpunk_aalto.git && cd traffpunk_aalto/
+git clone git@github.com:Teknologforeningen/traffpunkt_aalto.git && cd traffpunkt_aalto/
 ```
 
 Install virtualenv to the project.
@@ -76,7 +78,7 @@ $ heroku config:set DJANGO_ENVIRONMENT=heroku
 
 Deploy branch named "heroku" to heroku:
 ```bash
-$ git push -f heroku heroku:refs/heads/master
+$ git push heroku master
 ```
 
 Running commands:
